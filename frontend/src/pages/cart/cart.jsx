@@ -25,7 +25,7 @@ export const Cart = () => {
 
       {totalAmount > 0 ? (
         <div className="checkout">
-          <h2> Subtotal: <NumericFormat value={totalAmount} displayType={'text'} thousandSeparator={true} prefix={'$'} /> </h2>
+          <h2> Subtotal: <NumericFormat value={totalAmount} displayType={'text'} thousandSeparator={true} prefix={'$'} decimalScale={0}/> </h2>
           <button onClick={() => navigate("/")}> Continue Shopping </button>
           <button
             onClick={() => {

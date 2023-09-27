@@ -25,7 +25,7 @@ const calculatePriceEspecialDiscount = (price, quantity) => {
   const discountUnits = quantity / 3;
   let discount = discountUnits * PRODUCT_DISCOUNT;
   console.log(discountUnits);
-  discount = Math.min(discountUnits, MAX_DISCOUNT)
+  discount =  discount > 0.5 ? 0.5 : discount
 
   const priceEspecialDiscount = normalPrice - (normalPrice * discount)
   return priceEspecialDiscount
